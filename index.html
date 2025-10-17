@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sarreha Tasmin Rikta — Portfolio</title>
+  <meta name="description" content="Sarreha Tasmin Rikta — AI/ML for medical imaging portfolio: CycleGAN/CUT, KAN, XAI." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --fg:#111; --muted:#555; --link:#0056d6; --bg:#fff; --chipbg:#f4f6f8; --card:#fafafa;
+      --maxw: 980px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;color:var(--fg);background:var(--bg);line-height:1.6}
+    a{color:var(--link);text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--maxw);margin:auto;padding:28px 18px}
+    header{display:grid;grid-template-columns:120px 1fr;grid-gap:24px;align-items:center;margin-top:12px}
+    .avatar{width:120px;height:120px;border-radius:16px;object-fit:cover;background:#e9eef3}
+    h1{font-size:32px;line-height:1.2;margin:0 0 6px}
+    .subtitle{color:var(--muted)}
+    .chips{margin-top:10px;display:flex;flex-wrap:wrap;gap:8px}
+    .chip{background:var(--chipbg);padding:6px 10px;border-radius:999px;font-size:12px}
+    nav{margin-top:14px}
+    nav a{margin-right:14px;font-weight:600}
+    section{padding:28px 0;border-top:1px solid #eee}
+    section h2{font-size:20px;margin:0 0 12px}
+    .news li, .pubs li{margin-bottom:10px}
+    .muted{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+    .card{background:var(--card);border:1px solid #eee;border-radius:14px;padding:16px}
+    .pub-title{font-weight:600}
+    .authors{color:var(--muted)}
+    footer{padding:24px 0;color:var(--muted);font-size:14px}
+    @media (max-width:640px){header{grid-template-columns:72px 1fr}.avatar{width:72px;height:72px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img class="avatar" src="profile.jpg" alt="Profile photo placeholder"/>
+      <div>
+        <h1>Sarreha Tasmin Rikta</h1>
+        <div class="subtitle">M.S. Candidate, Smart ICE (AIIP Lab), Sun Moon University — Asan, South Korea</div>
+        <div class="chips">
+          <span class="chip">AI for Medical Imaging</span>
+          <span class="chip">GANs (CycleGAN/CUT/UNIT)</span>
+          <span class="chip">KAN layers</span>
+          <span class="chip">XAI (SHAP)</span>
+          <span class="chip">Dermatology</span>
+        </div>
+        <nav>
+          <a href="#news">News</a>
+          <a href="#publications">Publications</a>
+          <a href="#projects">Projects</a>
+          <a href="#awards">Awards</a>
+          <a href="#about">About</a>
+          <a href="cv.pdf">CV</a>
+        </nav>
+        <div class="subtitle" style="margin-top:8px">
+          <strong>Contact:</strong> <a href="mailto:your.email@domain">your.email@domain</a>
+          · <a href="https://scholar.google.com/" target="_blank" rel="noopener">Google Scholar</a>
+          · <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+          · <a href="https://github.com/" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+    </header>
+
+    <section id="news">
+      <h2>News</h2>
+      <ul class="news">
+        <li><strong>Nov 2025</strong> — Expected M.S. graduation (Sun Moon University).</li>
+        <li><strong>2025</strong> — Paper under major revision: “Explainable Machine Learning for Phishing Site Detection: XGBoost + SHAP”.</li>
+        <li><strong>2025</strong> — CUT/UNIT‑KAN clinical↔dermoscopic translation experiments (FID/LPIPS ongoing).</li>
+      </ul>
+    </section>
+
+    <section id="publications">
+      <h2>Publications</h2>
+      <ul class="pubs">
+        <li>
+          <div class="pub-title">Explainable Machine Learning for Phishing Site Detection: A High‑Efficiency Method Using XGBoost and SHAP</div>
+          <div class="authors">S. T. Rikta <span class="muted">(major revision, 2025)</span></div>
+          <div><a href="#">Paper</a> · <a href="#">Code</a> · <a href="#">BibTeX</a></div>
+        </li>
+        <li>
+          <div class="pub-title">Clinical↔Dermoscopic Image Translation with CycleGAN/CUT and KAN‑enhanced modules</div>
+          <div class="authors">S. T. Rikta, W. You, et al. <span class="muted">(in prep.)</span></div>
+          <div><a href="#">Preprint (soon)</a> · <a href="#">Project</a></div>
+        </li>
+        <li>
+          <div class="pub-title">Review: Animal Skin Disease Diagnosis using Machine/Deep Learning</div>
+          <div class="authors">S. T. Rikta (under review)</div>
+          <div><a href="#">Manuscript</a></div>
+        </li>
+      </ul>
+    </section>
+
+    <section id="projects">
+      <h2>Selected Projects</h2>
+      <div class="grid">
+        <div class="card">
+          <div class="pub-title">CUT/UNIT with KAN layers for clinical→dermoscopic translation</div>
+          <p>Paired dataset at <code>/workspace/release_v0</code>, PatchNCE + GAN + identity + perceptual losses, evaluating with FID/LPIPS and classifier consistency.</p>
+          <div class="muted"><a href="#">Code</a> · <a href="#">Slides</a> · <a href="#">Poster</a></div>
+        </div>
+        <div class="card">
+          <div class="pub-title">LSTM‑AE & Deep‑SVDD anomaly detection</div>
+          <p>Event‑level anomaly detection pipelines with denoising, stacked LSTM, variance‑weighted MSE, ν‑sweep diagnostics, isolation forest baselines.</p>
+          <div class="muted"><a href="#">Repo</a> · <a href="#">Report</a></div>
+        </div>
+        <div class="card">
+          <div class="pub-title">XAI for phishing detection</div>
+          <p>XGBoost + SHAP explanations; feature attribution dashboards and ablation studies.</p>
+          <div class="muted"><a href="#">Paper</a> · <a href="#">Demo</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="awards">
+      <h2>Honors & Awards</h2>
+      <ul>
+        <li>Fully funded scholarship student, Sun Moon University (Prof. Wonsang You).</li>
+        <li>Elsevier/Q1 publications as co‑author; multiple manuscripts under review.</li>
+        <li>IELTS valid until Dec 16, 2025.</li>
+      </ul>
+    </section>
+
+    <section id="about">
+      <h2>About Me</h2>
+      <p>
+        I work on AI for dermatology and medical imaging. My current focus is CycleGAN/CUT‑based clinical↔dermoscopic translation with KAN‑enhanced modules, and explainable ML for healthcare. I enjoy writing clean, reproducible pipelines with Docker + PyTorch and building visually polished research artifacts (papers, posters, and demos).
+      </p>
+    </section>
+
+    <footer>
+      <div>© <span id="y"></span> Sarreha Tasmin Rikta · Last updated <span id="d"></span></div>
+      <script>
+        const d=new Date();
+        document.getElementById('y').textContent=d.getFullYear();
+        document.getElementById('d').textContent=d.toLocaleDateString();
+      </script>
+    </footer>
+  </div>
+</body>
+</html>

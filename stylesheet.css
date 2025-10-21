@@ -129,6 +129,28 @@ strong {
   font-size: 14px;
 }
 
+/* kill underlines in all link states */
+a,
+a:link,
+a:visited,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none !important;
+  color: #1772d0;
+}
+
+a:hover,
+a:focus {
+  color: #f09228;
+}
+
+/* some templates fake underlines with borders—neutralize that too */
+a {
+  border-bottom: none !important;
+}
+
+
 h2 {
   margin: 0;
   font-weight: normal;
